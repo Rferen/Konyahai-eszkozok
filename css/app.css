@@ -1,0 +1,24 @@
+body {
+  background-image: url("../img/bg.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  background-color: rgba(255, 255, 255, .6);
+  margin-top: 5rem;
+}
+.contact {
+  text-align: center;
+}
+.nav img {
+  max-width: 20px;
+}
+.card-container {
+  display: inline-block;
+  max-width: 300px;
+  height: 500px;
+}
+
+
