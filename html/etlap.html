@@ -1,0 +1,257 @@
+<div class="container">
+  <header
+    class="navigate-container"
+    ng-include
+    src="'./html/navbar.html'">
+  </header>
+  <h1 class="text-center">Étlap</h1>
+  <div class="row">
+    <ul
+      id="form-tab"
+      class="nav nav-pills justify-content-center mt-3"
+      role="tablist">
+
+      <!-- Tab1 Pizza-->
+      <li class="nav-item nav-item-pills mx-2 d-block" role="presentation">
+        <!-- Button -->
+        <button
+          id="tab-1-tab"
+          class="btn btn-outline-secondary active ms-2 mb-2 btn-pills-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#tab-1"
+          role="tab"
+          type="button"
+          aria-controls="tab-1"
+          aria-selected="true">
+          Pizza
+        </button>
+      </li>
+
+      <!--Tab2 Hamburger-->
+      <li class="nav-item nav-item-pills mx-2" role="presentation">
+        <!--Button-->
+        <button
+          id="tab-2-tab"
+          class="btn btn-outline-secondary ms-2 mb-2 btn-pills-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#tab-2"
+          role="tab"
+          type="button"
+          aria-controls="tab-2"
+          aria-selected="false">
+          Burger
+        </button>
+      </li>
+
+      <!-- Tab3 Előétel-->
+      <li class="nav-item nav-item-pills mx-2" role="presentation">
+        <!-- Button -->
+        <button
+          id="tab-43-tab"
+          class="btn btn-outline-secondary ms-2 mb-2 btn-pills-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#tab-3"
+          role="tab"
+          type="button"
+          aria-controls="tab-3"
+          aria-selected="false">
+          Előétel
+        </button>
+      </li>
+      
+      <!--Tab4 Levesek-->
+      <li class="nav-item nav-item-pills mx-2" role="presentation">
+        <!--Button-->
+        <button
+          id="tab-4-tab"
+          class="btn btn-outline-secondary ms-2 mb-2 btn-pills-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#tab-4"
+          role="tab"
+          type="button"
+          aria-controls="tab-4"
+          aria-selected="false">
+          Leves
+        </button>
+      </li>
+
+      <!-- Tab5 Alacart-->
+      <li class="nav-item nav-item-pills mx-2" role="presentation">
+        <!-- Button -->
+        <button
+          id="tab-5-tab"
+          class="btn btn-outline-secondary ms-2 mb-2 btn-pills-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#tab-5"
+          role="tab"
+          type="button"
+          aria-controls="tab-5"
+          aria-selected="false">
+          Alacart
+        </button>
+      </li>
+
+      <!-- Tab6 Dessert -->
+      <li class="nav-item nav-item-pills mx-2" role="presentation">
+        <!-- Button -->
+        <button
+          id="tab-6-tab"
+          class="btn btn-outline-secondary ms-2 mb-2 btn-pills-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#tab-6"
+          role="tab"
+          type="button"
+          aria-controls="tab-6"
+          aria-selected="false">
+          Dessert
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="row">
+    <!-- Tab content -->
+    <div class="tab-content">
+
+      <!-- Tab1 panel -->
+      <div
+        id="tab-1"
+        class="tab-pane fade show active p-3 text-center"
+        role="tabpanel"
+        aria-labelledby="tab-1-tab">
+        <div class="card-container m-3" 
+             ng-repeat="x in data" 
+             ng-if="x.type=='PIZZA'">    
+          <div class="card ">
+            <img
+              ng-src="./img/{{x.img}}.jpg"
+              class="card-img-top"
+              alt="{{x.name}}" />
+            <div class="card-body">
+              <h5 class="card-title">{{x.name}}</h5>
+              <p class="card-text">{{x.description}}</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-danger">{{x.price}} Ft</small>
+            </div>
+          </div>            
+        </div>
+      </div>
+      
+      <!-- Tab2 panel -->
+      <div
+        id="tab-2"
+        class="tab-pane fade p-3 text-center "
+        role="tabpanel"
+        aria-labelledby="tab-2-tab">
+        <div class="card-container m-3" ng-repeat="x in data" ng-if="x.type=='BURGER'">                  
+          <div class="card">
+            <img
+              ng-src="./img/{{x.img}}.jpg"
+              class="card-img-top"
+              alt="{{x.name}}" />
+            <div class="card-body">
+              <h5 class="card-title">{{x.name}}</h5>
+              <p class="card-text">{{x.description}}</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-danger">{{x.price}} Ft</small>
+            </div>
+          </div>           
+        </div>
+      </div>
+
+      <!-- Tab3 panel -->
+      <div
+        id="tab-3"
+        class="tab-pane fade p-3 text-center"
+        role="tabpanel"
+        aria-labelledby="tab-3-tab">
+        <div class="card-container m-3" ng-repeat="x in data" ng-if="x.type=='eloetel'">
+          <div class="card ">
+            <img
+              ng-src="./img/{{x.img}}.jpg"
+              class="card-img-top"
+              alt="{{x.name}}" />
+            <div class="card-body">
+              <h5 class="card-title">{{x.name}}</h5>
+              <p class="card-text">{{x.description}}</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-danger">{{x.price}} Ft</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab4 panel -->
+      <div
+        id="tab-4"
+        class="tab-pane fade p-3 text-center"
+        role="tabpanel"
+        aria-labelledby="tab-4-tab">
+        <div class="card-container m-3" ng-repeat="x in data" ng-if="x.type=='leves'">
+          <div class="card ">
+            <img
+              ng-src="./img/{{x.img}}.jpg"
+              class="card-img-top"
+              alt="{{x.name}}" />
+            <div class="card-body">
+              <h5 class="card-title">{{x.name}}</h5>
+              <p class="card-text">{{x.description}}</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-danger">{{x.price}} Ft</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab5 panel -->
+      <div
+        id="tab-5"
+        class="tab-pane fade p-3 text-center"
+        role="tabpanel"
+        aria-labelledby="tab-5-tab">
+        <div class="card-container m-3" ng-repeat="x in data" ng-if="x.type=='alacart'">
+          <div class="card ">
+            <img
+              ng-src="./img/{{x.img}}.jpg"
+              class="card-img-top"
+              alt="{{x.name}}" />
+            <div class="card-body">
+              <h5 class="card-title">{{x.name}}</h5>
+              <p class="card-text">{{x.description}}</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-danger">{{x.price}} Ft</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab6 panel -->
+      <div
+        id="tab-6"
+        class="tab-pane fade p-3 text-center"
+        role="tabpanel"
+        aria-labelledby="tab-6-tab">
+        <div class="card-container m-3" ng-repeat="x in data" ng-if="x.type=='dessert'">
+          <div class="card ">
+            <img
+              ng-src="./img/{{x.img}}.jpg"
+              class="card-img-top"
+              alt="{{x.name}}" />
+            <div class="card-body">
+              <h5 class="card-title">{{x.name}}</h5>
+              <p class="card-text">{{x.description}}</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-danger">{{x.price}} Ft</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
