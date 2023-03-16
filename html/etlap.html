@@ -39,7 +39,7 @@
           type="button"
           aria-controls="tab-2"
           aria-selected="false">
-          Kanalak
+          Cukrász eszközök
         </button>
       </li>
 
@@ -55,7 +55,7 @@
           type="button"
           aria-controls="tab-3"
           aria-selected="false">
-          Villák
+          Gépek
         </button>
       </li>
       
@@ -71,43 +71,9 @@
           type="button"
           aria-controls="tab-4"
           aria-selected="false">
-          Cukrász eszközök
-        </button>
-      </li>
-
-      <!-- Tab5 Alacart-->
-      <li class="nav-item nav-item-pills mx-2" role="presentation">
-        <!-- Button -->
-        <button
-          id="tab-5-tab"
-          class="btn btn-outline-secondary ms-2 mb-2 btn-pills-tab"
-          data-bs-toggle="pill"
-          data-bs-target="#tab-5"
-          role="tab"
-          type="button"
-          aria-controls="tab-5"
-          aria-selected="false">
-          Gépek
-        </button>
-      </li>
-
-      <!-- Tab6 Dessert -->
-      <li class="nav-item nav-item-pills mx-2" role="presentation">
-        <!-- Button -->
-        <button
-          id="tab-6-tab"
-          class="btn btn-outline-secondary ms-2 mb-2 btn-pills-tab"
-          data-bs-toggle="pill"
-          data-bs-target="#tab-6"
-          role="tab"
-          type="button"
-          aria-controls="tab-6"
-          aria-selected="false">
           Sütők
         </button>
       </li>
-    </ul>
-  </div>
 
   <div class="row">
     <!-- Tab content -->
@@ -191,52 +157,6 @@
         role="tabpanel"
         aria-labelledby="tab-4-tab">
         <div class="card-container m-3" ng-repeat="x in data" ng-if="x.type=='leves'">
-          <div class="card ">
-            <img
-              ng-src="./img/{{x.img}}.jpg"
-              class="card-img-top"
-              alt="{{x.name}}" />
-            <div class="card-body">
-              <h5 class="card-title">{{x.name}}</h5>
-              <p class="card-text">{{x.description}}</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-danger">{{x.price}} Ft</small>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tab5 panel -->
-      <div
-        id="tab-5"
-        class="tab-pane fade p-3 text-center"
-        role="tabpanel"
-        aria-labelledby="tab-5-tab">
-        <div class="card-container m-3" ng-repeat="x in data" ng-if="x.type=='alacart'">
-          <div class="card ">
-            <img
-              ng-src="./img/{{x.img}}.jpg"
-              class="card-img-top"
-              alt="{{x.name}}" />
-            <div class="card-body">
-              <h5 class="card-title">{{x.name}}</h5>
-              <p class="card-text">{{x.description}}</p>
-            </div>
-            <div class="card-footer">
-              <small class="text-danger">{{x.price}} Ft</small>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tab6 panel -->
-      <div
-        id="tab-6"
-        class="tab-pane fade p-3 text-center"
-        role="tabpanel"
-        aria-labelledby="tab-6-tab">
-        <div class="card-container m-3" ng-repeat="x in data" ng-if="x.type=='dessert'">
           <div class="card ">
             <img
               ng-src="./img/{{x.img}}.jpg"
