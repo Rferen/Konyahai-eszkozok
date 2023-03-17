@@ -17,10 +17,10 @@
           templateUrl: './html/home.html',
           controller: 'homeController'
         })
-        .state('etlap', {
-          url: '/etlap',
-          templateUrl: './html/etlap.html',
-          controller: 'etlapController'
+        .state('eszkozok', {
+          url: '/eszkozok',
+          templateUrl: './html/eszkozok.html',
+          controller: 'eszkozokController'
         })
         .state('contact', {
           url: '/contact',  
@@ -41,10 +41,10 @@
   ])
 
   // etlap controller
-  .controller('etlapController', [
+  .controller('eszkozokController', [
     '$scope',
     function($scope) {
-      fetch('./php/etlap.php')
+      fetch('./php/eszkozok.php')
       .then(function(response) {
         return response.json();
       })
