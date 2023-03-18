@@ -40,7 +40,7 @@
     }
   ])
 
-  // etlap controller
+  // eszkozok controller
   .controller('eszkozokController', [
     '$scope',
     function($scope) {
