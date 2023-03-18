@@ -20,5 +20,8 @@ body {
   max-width: 300px;
   height: 500px;
 }
+.item-image{
+  max-height: 150px !important;
+}
 
 
