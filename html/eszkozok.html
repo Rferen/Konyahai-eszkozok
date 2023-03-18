@@ -110,10 +110,10 @@
         class="tab-pane fade p-3 text-center "
         role="tabpanel"
         aria-labelledby="tab-2-tab">
-        <div class="card-container m-3" ng-repeat="x in data" ng-if="x.type=='Gepek'">                  
+        <div class="card-container m-3" ng-repeat="x in data" ng-if="x.type=='Cukrasz'">                  
           <div class="card">
             <img
-              ng-src="./img/gepek/{{x.img}}.jpg"
+              ng-src="./img/cukrasz/{{x.img}}.jpg"
               class="card-img-top item-image"
               alt="{{x.name}}" />
             <div class="card-body">
@@ -133,10 +133,10 @@
         class="tab-pane fade p-3 text-center"
         role="tabpanel"
         aria-labelledby="tab-3-tab">
-        <div class="card-container m-3" ng-repeat="x in data" ng-if="x.type=='Cukrasz'">
+        <div class="card-container m-3" ng-repeat="x in data" ng-if="x.type=='Gepek'">
           <div class="card ">
             <img
-              ng-src="./img/cukrasz/{{x.img}}.jpg"
+              ng-src="./img/gepek/{{x.img}}.jpg"
               class="card-img-top item-image"
               alt="{{x.name}}" />
             <div class="card-body">
